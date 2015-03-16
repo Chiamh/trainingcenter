@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.Date;
 
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TcxTrackpointTest {
@@ -17,10 +17,10 @@ public class TcxTrackpointTest {
 	private static final int TEST1_ALTITUDE = 18;
 	private static final double TEST1_DISTANCE = 34.5;
 
-	private TcxTrackpoint test1TcxTrackpoint;
+	private static TcxTrackpoint test1TcxTrackpoint;
 
-	@Before
-	public void setup() {
+	@BeforeClass
+	public static void setup() {
 		test1TcxTrackpoint = new TcxTrackpoint(TEST1_DATE, TEST1_LONGITUDE, TEST1_LATITUDE, TEST1_ALTITUDE, TEST1_DISTANCE);
 	}
 

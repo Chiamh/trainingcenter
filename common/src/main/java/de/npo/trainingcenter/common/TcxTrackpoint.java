@@ -61,4 +61,21 @@ public class TcxTrackpoint implements Trackpoint {
 		return DATE_TIME_FORMATTER.format(time) + " ( " + DEGREES_FORMATTER.format(longitudeDegrees) + " , "
 				+ DEGREES_FORMATTER.format(latitudeDegrees) + " , " + altitudeMeters + " , " + distanceMeters + " )";
 	}
+
+	@Override
+	public int compareTo(Trackpoint other) {
+		if (other == null) {
+			return 1;
+		} else {
+			if (getTime() == null && other.getTime() == null) {
+				return 0;
+			} else if (getTime() == null) {
+				return -1;
+			} else if (other.getTime() == null) {
+				return 1;
+			} else {
+				return getTime().compareTo(other.getTime());
+			}
+		}
+	}
 }

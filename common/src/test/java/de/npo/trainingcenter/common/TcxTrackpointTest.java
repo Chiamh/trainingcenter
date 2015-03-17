@@ -60,13 +60,11 @@ public class TcxTrackpointTest {
 		assertEquals(TEST1_DISTANCE, test1TcxTrackpoint.getDistanceMeters(), DELTA_ACCEPTED);
 	}
 
-	@Test
+	@Test(expected = NullPointerException.class)
 	public void compareTo_nullPointsInFront() {
 		TcxTrackpoint nullPoint = null;
-		assertTrue(test1TcxTrackpoint.compareTo(nullPoint) > 0);
-
-		TcxTrackpoint pointNoTime = new TcxTrackpoint(null, TEST1_LONGITUDE, TEST1_LATITUDE, TEST1_ALTITUDE, TEST1_DISTANCE);
-		assertTrue(pointNoTime.compareTo(nullPoint) > 0);
+		test1TcxTrackpoint.compareTo(nullPoint);
+		fail();
 	}
 
 	@Test

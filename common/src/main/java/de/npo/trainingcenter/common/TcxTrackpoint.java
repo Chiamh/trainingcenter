@@ -65,7 +65,7 @@ public class TcxTrackpoint implements Trackpoint {
 	@Override
 	public int compareTo(Trackpoint other) {
 		if (other == null) {
-			return 1;
+			throw new NullPointerException("Trackpoint.compareTo(null)");
 		} else {
 			if (getTime() == null && other.getTime() == null) {
 				return 0;

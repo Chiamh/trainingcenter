@@ -1,9 +1,11 @@
-package de.npo.trainingcenter.common;
+package de.npo.trainingcenter.common.tcx;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import de.npo.trainingcenter.common.Trackpoint;
 
 public class TcxTrackpoint implements Trackpoint {
 

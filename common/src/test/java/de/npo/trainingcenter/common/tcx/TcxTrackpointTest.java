@@ -1,4 +1,4 @@
-package de.npo.trainingcenter.common;
+package de.npo.trainingcenter.common.tcx;
 
 import static org.junit.Assert.*;
 

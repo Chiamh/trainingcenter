@@ -1,3 +1,4 @@
 language: java
-script: mvn install -DskipTests -f common/pom.xml
-mvn test -f common/pom.xml
+script:
+ - mvn install -DskipTests -f common/pom.xml
+ - mvn test -f common/pom.xml
